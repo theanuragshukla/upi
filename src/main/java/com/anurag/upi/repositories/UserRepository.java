@@ -9,4 +9,6 @@ import java.util.List;
 
 @Repository
 public interface UserRepository extends JpaRepository<UsersEntity, Long> {
+    UsersEntity findByUserid(String userId);
+    void deleteAllByUserid(String id);
 }

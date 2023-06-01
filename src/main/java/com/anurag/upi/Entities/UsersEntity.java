@@ -10,6 +10,12 @@ public class UsersEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+
+    private String name;
+    private String userid;
+
+    private String createdon;
+
     public String getName() {
         return name;
     }
@@ -23,8 +29,7 @@ public class UsersEntity {
     }
 
     public void setUserId(String userId) {
-        System.out.println(userId);
-        this.userid = userid;
+        this.userid = userId;
     }
 
     public String getCreatedOn() {
@@ -35,9 +40,14 @@ public class UsersEntity {
         this.createdon = createdOn;
     }
 
-    private String name;
-    private String userid;
+    public boolean isAccount() {
+        return account;
+    }
 
-    private String createdon;
+    public void setAccount(boolean account) {
+        this.account = account;
+    }
+
+    private boolean account;
 
 }
