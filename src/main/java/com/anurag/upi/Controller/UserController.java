@@ -40,6 +40,7 @@ public class UserController {
 }
 @PostMapping("/delete")
     public boolean deleteUser(@RequestBody Map<String, String> user){
+    System.out.println(user);
         usersService.deleteUser(user.get("userId"));
         return true;
 }

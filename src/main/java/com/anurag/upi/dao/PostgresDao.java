@@ -40,6 +40,7 @@ public class PostgresDao implements UsersDao {
 
     @Override
     public void deleteUser(String userid) {
+        System.out.println("deleting ");
         db.deleteAllByUserid(userid);
     }
 }
